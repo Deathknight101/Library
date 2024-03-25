@@ -16,7 +16,7 @@ const Books = () => {
 
         <div className="mt-24">
             <div className="flex justify-center">
-                <h2 className="text-neutral-900 text-4xl font-bold">Books: {books.length}</h2>
+                <h2 className="text-neutral-900 text-4xl font-bold mb-6">Books</h2>
             </div>
             <div className="grid lg:grid-cols-3 gap-6">
                 {
