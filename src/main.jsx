@@ -11,23 +11,29 @@ import Root from './components/Root/Root';
 import ListedBooks from './components/ListedBooks/ListedBooks';
 import PagesRead from './components/PagesRead/PagesRead';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import BookDetails from './components/BookDetails/BookDetails';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<ErrorPage></ErrorPage>,
-    children:[
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
       {
         path: '/',
-        element : <Home></Home>
+        element: <Home></Home>
       },
       {
         path: '/listedbooks',
-        element:<ListedBooks></ListedBooks>
+        element: <ListedBooks></ListedBooks>
       },
       {
         path: '/pages',
         element: <PagesRead></PagesRead>
+      },
+      {
+        path: '/book/:id',
+        element: <BookDetails></BookDetails>,
+        
       }
     ]
   },
