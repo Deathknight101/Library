@@ -5,7 +5,7 @@ const Book = ({ book }) => {
     const { bookId, image, bookName, author, category, rating, tags } = book;
     return (
         <Link to={`/book/${bookId}`}>
-            <div className="card bg-base-100 shadow-xl border-gray-200 border-2">
+            <div className="card bg-base-100 shadow-xl border-gray-200 border-2 h-full">
                 <figure className="px-10 pt-10 h-full">
                     <img src={image} alt="cover" className="rounded-xl" />
                 </figure>
@@ -26,7 +26,7 @@ const Book = ({ book }) => {
                         <div>
                             <p>{category}</p>
                         </div>
-                        <div className="flex">
+                        <div className="flex items-center">
                             <CiStar className="text-xl" />
                             <p>{rating}</p>
                         </div>

@@ -4,13 +4,15 @@ import { Link } from "react-router-dom";
 const Banner = () => {
     return (
         <div className="p-2 lg:p-0">
-            <div className="hero h-96 bg-center rounded-xl" style={{ backgroundImage: 'url(../src/assets/images/Cover.jpg)' }}>
-                <div className="hero-overlay rounded-xl"></div>
-                <div className="hero-content text-center text-neutral-content ">
-                    <div className="max-w-md">
-                        <h1 className="text-neutral-900 text-6xl font-bold ">Books to freshen up your bookshelf</h1>
+            <div className="hero h-full rounded-xl bg-base-200">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <img src="/images/gatsby.png" className="h-80 lg:h-96" />
+                    <div>
+                        <h1 className="text-5xl font-bold">Books to freshen up <br /> your bookshelf</h1>
+                        <Link to='/listedbooks'>
+                            <button className="btn mt-5 bg-green-600 text-white">View The List</button>
+                        </Link>
 
-                        <Link to='/listedbooks'><button className="btn btn-primary mt-6 bg-green-600">View The List</button></Link>
                     </div>
                 </div>
             </div>
