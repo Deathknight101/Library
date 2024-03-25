@@ -6,8 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        
+      fontFamily: {
+        heading: ["Playfair Display"],
+        text:["Work Sans"]
       }
     },
   },

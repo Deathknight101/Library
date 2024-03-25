@@ -106,10 +106,10 @@ const ListedBooks = () => {
                 <TabPanel>
                     <div className="flex flex-col gap-6">
                         {
-                            disReadlist.map(book => <div key={book.bookId} className="card card-side bg-base-100 shadow-xl">
+                            disReadlist.map(book => <div key={book.bookId} className="card card-side bg-base-100 shadow-xl border-2">
                                 <figure className="p-4"><img className="h-56 rounded-lg" src={book.image} alt="Cover" /></figure>
                                 <div className="flex flex-col gap-3 w-full p-4">
-                                    <h2 className="card-title">{book.bookName}</h2>
+                                    <h2 className="card-title text-4xl font-heading font-bold">{book.bookName}</h2>
                                     <p>by : {book.author}</p>
                                     <div className="flex flex-col lg:flex-row
                         gap-3 lg:items-center">
@@ -145,7 +145,7 @@ const ListedBooks = () => {
                                         </div>
                                         <Link to={`/book/${book.bookId}`}>
                                             <button  className=" btn-primary w-36 h-10 px-5 py-2.5 bg-green-600 rounded-3xl justify-center items-center gap-2.5 inline-flex">
-                                                <div className="text-center text-white text-lg font-medium ">View Details</div>
+                                                <div className="text-center text-white  font-medium ">View Details</div>
                                             </button>
                                         </Link>
 
@@ -159,10 +159,10 @@ const ListedBooks = () => {
                 <TabPanel>
                     <div className="flex flex-col gap-6">
                         {
-                            disWishlist.map(book => <div key={book.bookId} className="card card-side bg-base-100 shadow-xl">
+                            disWishlist.map(book => <div key={book.bookId} className="card card-side bg-base-100 shadow-xl border-2">
                                 <figure className="p-4"><img className="h-56 rounded-lg" src={book.image} alt="Cover" /></figure>
                                 <div className="flex flex-col gap-3 w-full p-4">
-                                    <h2 className="card-title">{book.bookName}</h2>
+                                    <h2 className="card-title text-4xl font-heading font-bold">{book.bookName}</h2>
                                     <p>by : {book.author}</p>
                                     <div className="flex flex-col lg:flex-row
                         gap-3 lg:items-center">
@@ -197,7 +197,7 @@ const ListedBooks = () => {
                                             <div className="text-center text-amber-400 text-base font-normal font-['Work Sans']">Rating: {book.rating}</div>
                                         </div>
                                         <div className="w-36 h-10 px-5 py-2.5 bg-green-600 rounded-3xl justify-center items-center gap-2.5 inline-flex">
-                                            <div className="text-center text-white text-lg font-medium font-['Work Sans']">View Details</div>
+                                            <div className="text-center text-white  font-medium ">View Details</div>
                                         </div>
                                     </div>
                                 </div>

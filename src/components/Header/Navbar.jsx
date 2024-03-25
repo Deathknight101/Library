@@ -23,7 +23,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <Link to='/'>
-                        <a className="btn btn-ghost text-xl">Book Vibe</a>
+                        <a className="btn btn-ghost text-xl lg:text-5xl font-heading">Book Vibe</a>
                     </Link>
 
                 </div>

@@ -19,7 +19,7 @@ const Book = ({ book }) => {
 
                     </div>
 
-                    <h2 className="card-title">{bookName}</h2>
+                    <h2 className="card-title text-2xl font-bold font-heading">{bookName}</h2>
                     <p>By: {author}</p>
                     <hr className="w-full" />
                     <div className="flex justify-between">

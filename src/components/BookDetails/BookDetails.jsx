@@ -22,11 +22,11 @@ const BookDetails = () => {
 
                 <div className="flex gap-12 lg:flex-row flex-col 
                 ">
-                    <div className="flex-1 p-4 ">
+                    <div className="flex-1 p-4">
                         <img className="rounded-xl" src={book.image} alt="" />
                     </div>
                     <div className="flex-1 p-4">
-                        <h1 className="mb-4 text-4xl font-bold">
+                        <h1 className="mb-4 text-4xl font-bold font-heading">
                             {book.bookName}
                         </h1>
                         <hr className="mb-4" />
