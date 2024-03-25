@@ -12,7 +12,7 @@ const Book = ({ book }) => {
                 <div className="card-body  ">
                     <div className="flex gap-3">
                         {
-                            tags.map(tag => <div key={tags} className="px-4 py-1.5 bg-green-600 bg-opacity-5 rounded-3xl">
+                            tags.map(tag => <div key={tag} className="px-4 py-1.5 bg-green-600 bg-opacity-5 rounded-3xl">
                                 <p className="text-green-600">{tag} </p>
                             </div>)
                         }
