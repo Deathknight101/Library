@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { getStoredBooks, getStoredWishlistBooks } from "../../utility/localStorage";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -12,7 +12,7 @@ import { IoIosArrowDown } from "react-icons/io";
 const ListedBooks = () => {
 
     const books = useLoaderData();
-
+    const navigate = useNavigate();
     const [listedBooks, setListedBooks] = useState([])
     const [wishlistBooks, setWishlistBooks] = useState([])
     const [disReadlist, setDisReadlist] = useState([])
@@ -143,9 +143,12 @@ const ListedBooks = () => {
                                         <div className="w-32 h-10 px-5 py-2.5 bg-amber-400 bg-opacity-20 rounded-3xl justify-center items-center gap-2.5 inline-flex">
                                             <div className="text-center text-amber-400 text-base font-normal font-['Work Sans']">Rating: {book.rating}</div>
                                         </div>
-                                        <div className="w-36 h-10 px-5 py-2.5 bg-green-600 rounded-3xl justify-center items-center gap-2.5 inline-flex">
-                                            <div className="text-center text-white text-lg font-medium font-['Work Sans']">View Details</div>
-                                        </div>
+                                        <Link to={`/book/${book.bookId}`}>
+                                            <button  className=" btn-primary w-36 h-10 px-5 py-2.5 bg-green-600 rounded-3xl justify-center items-center gap-2.5 inline-flex">
+                                                <div className="text-center text-white text-lg font-medium ">View Details</div>
+                                            </button>
+                                        </Link>
+
                                     </div>
                                 </div>
                             </div>
@@ -204,7 +207,7 @@ const ListedBooks = () => {
                     </div>
                 </TabPanel>
             </Tabs>
-        </div>
+        </div >
     );
 };
 
