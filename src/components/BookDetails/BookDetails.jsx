@@ -1,21 +1,29 @@
 import { useLoaderData, useParams } from
     "react-router-dom";
 import { Link } from "react-router-dom";
+import { Toaster, toast } from 'sonner'
+import { saveBooks, saveBooksWishlist } from "../../utility/localStorage";
 
 
 const BookDetails = () => {
     const books = useLoaderData();
     const { id } = useParams();
     const book = books.books.find(book => book.bookId === id);
-
+    const handleRead = () => {
+        saveBooks(id);       
+    }
+    const handleWishlist = () => {
+        
+        saveBooksWishlist(id);
+    }
     if (book) {
         return (
             <>
-                
+
                 <div className="flex gap-12 lg:flex-row flex-col 
                 ">
-                    <div className="flex-1">
-                        <img className="" src={book.image} alt="" />
+                    <div className="flex-1 p-4 ">
+                        <img className="rounded-xl" src={book.image} alt="" />
                     </div>
                     <div className="flex-1 p-4">
                         <h1 className="mb-4 text-4xl font-bold">
@@ -76,14 +84,15 @@ const BookDetails = () => {
                             </table>
                         </div>
                         <div className="flex gap-3">
-                            <button className="btn bg-white border-gray-200">
+                            <button onClick={handleRead} className="btn bg-white border-gray-200">
                                 Read
                             </button>
-                            <button className="btn bg-teal-400 text-white">
+                            <button onClick={handleWishlist} className="btn bg-teal-400 text-white">
                                 Wishlist
                             </button>
                         </div>
                     </div>
+
                 </div>
 
             </>

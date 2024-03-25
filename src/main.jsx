@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { Toaster, toast } from 'sonner'
 
 import './index.css'
 import {
@@ -24,11 +25,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/listedbooks',
-        element: <ListedBooks></ListedBooks>
+        element: <ListedBooks></ListedBooks>,
+        loader: ()=>fetch(`/Books.json`)
       },
       {
         path: '/pages',
         element: <PagesRead></PagesRead>
+        
       },
       {
         path: '/book/:id',
@@ -42,5 +45,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <Toaster richColors position="bottom-right" />
   </React.StrictMode>,
+  
 )
