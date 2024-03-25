@@ -13,6 +13,7 @@ import ListedBooks from './components/ListedBooks/ListedBooks';
 import PagesRead from './components/PagesRead/PagesRead';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import BookDetails from './components/BookDetails/BookDetails';
+import About from './components/About/About';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,18 +27,23 @@ const router = createBrowserRouter([
       {
         path: '/listedbooks',
         element: <ListedBooks></ListedBooks>,
-        loader: ()=>fetch(`/Books.json`)
+        loader: () => fetch(`/Books.json`)
       },
       {
         path: '/pages',
         element: <PagesRead></PagesRead>,
-        loader: ()=>fetch(`/Books.json`)
+        loader: () => fetch(`/Books.json`)
       },
       {
         path: '/book/:id',
         element: <BookDetails></BookDetails>,
-        loader: ()=>fetch(`/Books.json`)
+        loader: () => fetch(`/Books.json`)
+      },
+      {
+        path: '/about',
+        element: <About></About>,
       }
+
     ]
   },
 ]);
@@ -47,5 +53,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
     <Toaster richColors position="bottom-right" />
   </React.StrictMode>,
-  
+
 )
