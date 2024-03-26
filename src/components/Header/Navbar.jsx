@@ -6,7 +6,9 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/listedbooks">Listed Books</NavLink></li>
         <li><NavLink to="/pages">Pages to Read</NavLink></li>
+        <li><NavLink to="/featured">Featured</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
+
 
     </>
 
@@ -33,8 +35,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end flex lg:gap-5">
-                    <a className="btn bg-green-600 text-white text-lg">Sign In</a>
-                    <a className="btn bg-teal-300 text-white text-lg">Sign Up</a>
+                    <a className="btn btn-xs sm:btn-sm md:btn-md  bg-green-600 text-white lg:text-lg ">Sign In</a>
+                    <a className="btn btn-xs sm:btn-sm md:btn-md  bg-teal-300 text-white lg:text-lg">Sign Up</a>
                 </div>
             </div>
         </div>
