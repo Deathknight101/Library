@@ -3,8 +3,8 @@ import { CiStar } from "react-icons/ci";
 const Featured = () => {
     return (
         <div className="p-4 lg:p-0">
-            <div className="flex justify-center mt-5 mb-5">
-                <h1 className="font-heading text-5xl font-bold text-center lg:text-start">Our Featured Books</h1>
+            <div className="flex justify-center mt-5 mb-5 bg-gray-100 rounded-lg">
+                <h1 className="font-heading text-5xl font-bold text-center lg:text-start p-4">Our Featured Books</h1>
             </div>
             <div className="grid lg:grid-cols-4 gap-6 mb-10">
                 {/* card 1 */}

@@ -84,6 +84,9 @@ const ListedBooks = () => {
 
     return (
         <div className="p-4">
+            <div className="bg-gray-100 rounded-lg">
+                <h1 className="flex justify-center mb-5 font-heading font-bold text-5xl p-2">All Listed Books</h1>
+            </div>
 
             <div className="flex justify-center">
                 <details className="dropdown">
@@ -160,7 +163,7 @@ const ListedBooks = () => {
                     <div className="flex flex-col gap-6">
                         {
                             disWishlist.map(book => <div key={book.bookId} className="card card-side bg-base-100 shadow-xl border-2">
-                                <figure className="p-4"><img className="h-56 rounded-lg" src={book.image} alt="Cover" /></figure>
+                                <figure className="p-4"><img className="h-56  rounded-lg" src={book.image} alt="Cover" /></figure>
                                 <div className="flex flex-col gap-3 w-full p-4">
                                     <h2 className="card-title text-4xl font-heading font-bold">{book.bookName}</h2>
                                     <p>by : {book.author}</p>
