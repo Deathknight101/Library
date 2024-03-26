@@ -14,7 +14,7 @@ const Books = () => {
 
 
 
-        <div className="mt-24 ">
+        <div className="mt-24 p-2">
             <div className="flex justify-center bg-gray-100 rounded-lg mb-4">
                 <h2 className="text-neutral-900 text-5xl font-bold font-heading p-4 ">Books</h2>
             </div>
