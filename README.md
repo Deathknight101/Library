@@ -1,8 +1,7 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+BookHub URL: Book-vibes.surge.sh
+Welcome to BookHub, your one-stop destination for book lovers! Below are the key features and characteristics of my website:
+•	Interactive Experience: Users can interact with book cards to view detailed information and add books to their Read or Wishlist, enhancing engagement and personalization.
+•	Data Visualization: Our Pages to Read page features a custom Shape Bar Chart, providing insightful visuals on users' reading progress, making tracking and planning reading goals enjoyable.
+•	Rich Book Database: We have curated a diverse collection of books with detailed information including author, category, rating, and more, allowing users to discover their next favorite read easily.
+•	Comprehensive Navigation: With a well-organized navbar featuring essential links such as Home, Listed Books, and Pages to Read, navigating the website is effortless.
+•	It is very easy to track the already-read books and wish list books through this website.
